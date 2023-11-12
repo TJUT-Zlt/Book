@@ -73,9 +73,9 @@
 				</c:if>
 				<c:if test="${not empty sessionScope.cart.items}">
 					<%--购物车非空的输出--%>
-					<span id="cartTotalCount">默认值</span>
+					<span id="cartTotalCount"></span>
 					<div>
-						<span style="color: red" id="cartNullOrLastName">默认值</span>
+						<span style="color: red" id="cartNullOrLastName"></span>
 					</div>
 				</c:if>
 			</div>
