@@ -17,16 +17,16 @@
 					var bookId = $(this).attr("bookId");
 
 					<%--location.href = "${pageScope.basePath}cartServlet?action=addItem&id="+bookId;--%>
-					//  location.href = "http://localhost:8080/Book/cartServlet?action=addItem&id="+bookId;
+					 location.href = "http://localhost:8080/Book/cartServlet?action=addItem&id="+bookId;
 					<%--${pageScope.basePath}--%>
 					<%-- http://localhost:8080/Book/--%>
 
-					// 发 ajax 请求，添加商品到购物车
-					$.getJSON("http://localhost:8080/Book/cartServlet","action=ajaxAddItem&id=" +
-							bookId,function (data) {
-						$("#cartTotalCount").text("您的购物车中有" + data.totalCount + "   件商品");
-						$("#cartNullOrLastName").text("您刚刚将"+ data.lastName + "加入到了购物车中");
-					})
+					// // 发 ajax 请求，添加商品到购物车
+					// $.getJSON("http://localhost:8080/Book/cartServlet","action=ajaxAddItem&id=" +
+					// 		bookId,function (data) {
+					// 	$("#cartTotalCount").text("您的购物车中有" + data.totalCount + "   件商品");
+					// 	$("#cartNullOrLastName").text("您刚刚将"+ data.lastName + "加入到了购物车中");
+					// })
 				});
 			});
 		</script>
@@ -73,9 +73,9 @@
 				</c:if>
 				<c:if test="${not empty sessionScope.cart.items}">
 					<%--购物车非空的输出--%>
-					<span id="cartTotalCount"></span>
+					<span id="cartTotalCount">您的购物车中有<span style="color: red">${sessionScope.cart.totalCount}</span>件商品</span>
 					<div>
-						<span style="color: red" id="cartNullOrLastName"></span>
+						您刚刚将<span style="color: red" id="cartNullOrLastName">${sessionScope.lastName}</span>加入到了购物车中
 					</div>
 				</c:if>
 			</div>
