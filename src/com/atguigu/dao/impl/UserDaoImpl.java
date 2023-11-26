@@ -1,5 +1,6 @@
 package com.atguigu.dao.impl;
 
+import com.atguigu.dao.BaseDao;
 import com.atguigu.dao.UserDao;
 import com.atguigu.pojo.User;
 
