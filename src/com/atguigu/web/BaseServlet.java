@@ -8,6 +8,8 @@ import java.io.IOException;
 import java.lang.reflect.Method;
 
 /**
+ *
+ * 基础Servlet类 ,把所有请求全部转为post
  * @author abel
  * @create 2023-09-15 18:41
  */

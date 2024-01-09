@@ -19,6 +19,14 @@ public class Cart {
      */
     private Map<Integer,CartItem> items = new LinkedHashMap<Integer, CartItem>();
 
+    public Map<Integer, CartItem> getItems() {
+        return items;
+    }
+
+    public void setItems(Map<Integer, CartItem> items) {
+        this.items = items;
+    }
+
     /**
      *添加商品项
      * @param cartItem
@@ -83,14 +91,6 @@ public class Cart {
             totalPrice = totalPrice.add(entry.getValue().getTotalPrice());
         }
         return totalPrice;
-    }
-
-    public Map<Integer, CartItem> getItems() {
-        return items;
-    }
-
-    public void setItems(Map<Integer, CartItem> items) {
-        this.items = items;
     }
 
     @Override

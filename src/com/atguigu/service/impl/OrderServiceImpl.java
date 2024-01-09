@@ -25,12 +25,11 @@ public class OrderServiceImpl implements OrderService {
     private OrderDao orderDao = new OrderDaoImpl();
     private OrderItemDao orderItemDao = new OrderItemDaoImpl();
     private BookDao bookDao = new BookDaoImpl();
-
     private UserDao userDao  = new UserDaoImpl();
 
     @Override
     public int getUserId(String username) {
-        return userDao.queryUseIdByUsername(username);
+        return userDao.queryUserIdByUsername(username);
     }
 
     @Override
@@ -44,7 +43,7 @@ public class OrderServiceImpl implements OrderService {
         orderDao.saveOrder(order);
         // 遍历购物车中每一个商品项转换成为订单项保存到数据库
         for (Map.Entry<Integer, CartItem>entry : cart.getItems().entrySet()){
-        // 获取每一个购物车中的商品项
+            // 获取每一个购物车中的商品项
             CartItem cartItem = entry.getValue();
             // 转换为每一个订单项
             OrderItem orderItem = new OrderItem(null,cartItem.getName(),cartItem.getCount(),cartItem.getPrice(),cartItem.getTotalPrice(), orderId);
@@ -69,7 +68,6 @@ public class OrderServiceImpl implements OrderService {
 
     @Override
     public List<OrderItem> orderDetails(String OrderId) {
-
         return orderItemDao.queryOrderItemsByOrderId(OrderId);
     }
 

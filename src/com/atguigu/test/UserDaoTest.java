@@ -38,6 +38,6 @@ public class UserDaoTest {
 
     @Test
     public void queryUseIdByUsername() {
-        System.out.println(userDao.queryUseIdByUsername("momomo"));
+        System.out.println(userDao.queryUserIdByUsername("momomo"));
     }
 }

@@ -57,6 +57,7 @@ public class ClientBookServlet extends BaseServlet {
         int max = WebUtils.parseInt(req.getParameter("max"), Integer.MAX_VALUE);
 
         //2 调用BookService.page(pageNo，pageSize)：Page对象
+        //todo 增加异常捕捉功能
         Page<Book> page = bookService.pageByPrice(pageNo,pageSize,min,max);
 
         StringBuilder sb = new StringBuilder("client/clientBookServlet?action=pageByPrice");

@@ -26,8 +26,10 @@ public class UserServiceImpl implements UserService {
     @Override
     public boolean existsUsername(String username) {
         if(userDao.queryUserByUsername(username) == null){
-            return false;//用户名可用
+            //用户名可用
+            return false;
         }
-        return true;//用户名不可用
+        //用户名不可用
+        return true;
     }
 }

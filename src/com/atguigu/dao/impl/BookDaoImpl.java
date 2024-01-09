@@ -1,6 +1,5 @@
 package com.atguigu.dao.impl;
 
-import com.atguigu.dao.BaseDao;
 import com.atguigu.dao.BookDao;
 import com.atguigu.pojo.Book;
 

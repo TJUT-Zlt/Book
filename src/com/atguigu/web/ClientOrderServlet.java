@@ -48,7 +48,7 @@ public class ClientOrderServlet extends BaseServlet{
         Integer userId = loginUser.getId();
         String username = loginUser.getUsername();
 
-        //尝试解决注册时user id 问题
+        //尝试解决注册时用户id为空问题
         if(userId == null){
             userId = orderService.getUserId(username);
         }

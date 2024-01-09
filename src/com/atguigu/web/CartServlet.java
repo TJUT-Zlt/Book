@@ -51,7 +51,6 @@ public class CartServlet extends BaseServlet{
         // 重定向回原来商品所在的地址页面
         resp.sendRedirect(req.getHeader("Referer"));
 
-        //http://localhost:8080/Book/
         //System.out.println(req.getHeader("Referer"));
     }
 

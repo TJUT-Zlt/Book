@@ -1,6 +1,5 @@
 package com.atguigu.dao.impl;
 
-import com.atguigu.dao.BaseDao;
 import com.atguigu.dao.OrderItemDao;
 import com.atguigu.pojo.OrderItem;
 

@@ -9,7 +9,7 @@ import java.sql.SQLException;
 import java.util.Properties;
 
 /**
- * 考虑事务的数据库连接
+ * 考虑事务的数据库连接--->同一个用户单线程
  * @author abel
  * @create 2023-09-13 8:23
  */

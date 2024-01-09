@@ -60,6 +60,8 @@ public class AdminUserServlet extends BaseServlet{
 
         //2、重定向到首页（或登录页面）
         resp.sendRedirect(req.getContextPath());
+
+        //System.out.println(req.getContextPath());
     }
 
 }

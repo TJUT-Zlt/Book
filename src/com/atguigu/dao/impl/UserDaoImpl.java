@@ -1,6 +1,5 @@
 package com.atguigu.dao.impl;
 
-import com.atguigu.dao.BaseDao;
 import com.atguigu.dao.UserDao;
 import com.atguigu.pojo.User;
 
@@ -29,7 +28,7 @@ public class UserDaoImpl extends BaseDao implements UserDao {
     }
 
     @Override
-    public int queryUseIdByUsername(String username) {
+    public int queryUserIdByUsername(String username) {
         String sql = "select `id` from t_user where username = ?";
         return (int)queryForSingleValue(sql,username);
     }

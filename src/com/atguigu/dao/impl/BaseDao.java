@@ -1,4 +1,4 @@
-package com.atguigu.dao;
+package com.atguigu.dao.impl;
 
 import com.atguigu.utils.JdbcUtils;
 import org.apache.commons.dbutils.QueryRunner;
@@ -31,7 +31,8 @@ public abstract class BaseDao {
             return queryRunner.update(connection,sql,args);
         } catch (SQLException e) {
             e.printStackTrace();
-            throw new RuntimeException(e);// 把异常抛给 Filter 过滤器
+            // 把异常抛给 Filter 过滤器
+            throw new RuntimeException(e);
         }
     }
 

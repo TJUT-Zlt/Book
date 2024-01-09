@@ -31,11 +31,11 @@ public interface UserDao {
     public int saveUser(User user);
 
     /**
-     * 根据用户名查找用户id
+     * 根据用户名查找用户id--->用于获取注册用户id
      * @param username
      * @return
      */
-    public int queryUseIdByUsername(String username);
+    public int queryUserIdByUsername(String username);
 
 
 

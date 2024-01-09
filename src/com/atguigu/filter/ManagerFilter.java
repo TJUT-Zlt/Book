@@ -1,12 +1,12 @@
 package com.atguigu.filter;
 
-import com.atguigu.pojo.AdminUser;
-
 import javax.servlet.*;
 import javax.servlet.http.HttpServletRequest;
 import java.io.IOException;
 
 /**
+ *
+ * 管理端登录验证
  * @author abel
  * @create 2023-09-19 9:12
  */
