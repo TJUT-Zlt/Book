@@ -6,6 +6,7 @@ import com.atguigu.service.impl.UserServiceImpl;
 import com.google.gson.Gson;
 
 import javax.servlet.ServletException;
+import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
@@ -42,6 +43,10 @@ public class UserServlet extends BaseServlet {
 
             req.getRequestDispatcher("/pages/user/login.jsp").forward(req,resp);
         }else {
+
+            Cookie cookie = new Cookie("username",username);
+            cookie.setMaxAge(60 * 60 * 24 * 7);//当前 Cookie一周内有效
+            resp.addCookie(cookie);
 
             // 保存用户登录的信息到Session域中
             req.getSession().setAttribute("user", loginUser);

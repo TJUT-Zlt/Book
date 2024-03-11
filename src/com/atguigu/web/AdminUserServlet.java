@@ -15,7 +15,7 @@ import java.io.IOException;
  */
 public class AdminUserServlet extends BaseServlet{
 
-    AdminUserService adminUserService =new AdminUserServiceImpl();
+    AdminUserService adminUserService = new AdminUserServiceImpl();
 
     /**
      * 管理员登录
