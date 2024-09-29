@@ -1,19 +1,18 @@
 package com.atguigu.web;
 
+import static com.google.code.kaptcha.Constants.KAPTCHA_SESSION_KEY;
+
 import com.atguigu.pojo.User;
 import com.atguigu.service.UserService;
 import com.atguigu.service.impl.UserServiceImpl;
 import com.google.gson.Gson;
-
+import java.io.IOException;
+import java.util.HashMap;
+import java.util.Map;
 import javax.servlet.ServletException;
 import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import java.io.IOException;
-import java.util.HashMap;
-import java.util.Map;
-
-import static com.google.code.kaptcha.Constants.KAPTCHA_SESSION_KEY;
 
 
 /**
@@ -118,7 +117,7 @@ public class UserServlet extends BaseServlet {
     }
 
     /**
-     *验证用户名是否可用
+     * 验证用户名是否可用
      * @param req
      * @param resp
      * @throws ServletException

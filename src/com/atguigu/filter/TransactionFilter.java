@@ -1,9 +1,13 @@
 package com.atguigu.filter;
 
 import com.atguigu.utils.JdbcUtils;
-
-import javax.servlet.*;
 import java.io.IOException;
+import javax.servlet.Filter;
+import javax.servlet.FilterChain;
+import javax.servlet.FilterConfig;
+import javax.servlet.ServletException;
+import javax.servlet.ServletRequest;
+import javax.servlet.ServletResponse;
 
 /**
  * 事务过滤器的使用
@@ -16,6 +20,7 @@ public class TransactionFilter implements Filter {
     public void init(FilterConfig filterConfig) throws ServletException {
 
     }
+
 
     @Override
     public void doFilter(ServletRequest servletRequest, ServletResponse servletResponse, FilterChain filterChain) throws IOException, ServletException {
