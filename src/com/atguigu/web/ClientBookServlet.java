@@ -27,6 +27,10 @@ public class ClientBookServlet extends BaseServlet {
      * @throws IOException
      */
     protected void page(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+
+        //System.out.println("ClientBookServlet中page的this" + this);
+        //System.out.println("ClientBookServlet中page的this.getClass()" + this.getClass());
+
         //1 获取请求的参数 pageNo 和 pageSize
         int pageNo = WebUtils.parseInt(req.getParameter("pageNo"), 1);
         int pageSize = WebUtils.parseInt(req.getParameter("pageSize"), Page.PAGE_SIZE);

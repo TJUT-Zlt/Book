@@ -23,9 +23,13 @@ public class BaseServlet extends HttpServlet {
         try {
             //使用反射优化大量else if代码：
             // 获取 action 业务鉴别字符串，获取相应的业务 方法反射对象
+
+            //System.out.println("BaseServlet中doPost的this" + this);
+            //System.out.println("BaseServlet中doPost的this.getClass()" + this.getClass());
+
             Method method = this.getClass().getDeclaredMethod(action, HttpServletRequest.class, HttpServletResponse.class);
-            // System.out.println(method);
-            // 调用目标业务 方法
+
+            // 调用目标业务的方法
             method.invoke(this, req, resp);
         } catch (Exception e) {
             e.printStackTrace();

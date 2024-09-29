@@ -17,7 +17,7 @@ public class JdbcUtils {
 
     private static DruidDataSource dataSource;
 
-    private static ThreadLocal<Connection> conns = new ThreadLocal<Connection>();
+    private static ThreadLocal<Connection> conns = new ThreadLocal<>();
 
 
     static {
@@ -25,6 +25,9 @@ public class JdbcUtils {
             Properties properties = new Properties();
             //关键 空指针异常
             //InputStream inputStream = ClassLoader.getSystemClassLoader().getResourceAsStream("JDBC.properties");
+            //System.out.println("JdbcUtils.class.getClassLoader()--->" + JdbcUtils.class.getClassLoader());
+            //System.out.println("ClassLoader.getSystemClassLoader()--->" + ClassLoader.getSystemClassLoader());
+
             InputStream inputStream = JdbcUtils.class.getClassLoader().getResourceAsStream("JDBC.properties");
 
             properties.load(inputStream);
